@@ -61,19 +61,12 @@ function statement(invoice, plays) {
     }
     return volumeCredits;
   }
-  function appleSauce() {
-    let totalAmount = 0;
-    for (let perf of invoice.performances) {
-      totalAmount += amountFor(perf);
-    }
-    return totalAmount;
-  }
   function totalAmount() {
-    let totalAmount = 0;
+    let result = 0;
     for (let perf of invoice.performances) {
-    totalAmount += amountFor(perf);
+      result += amountFor(perf);
     }
-    return totalAmount;
+    return result;
    }
 }
 
